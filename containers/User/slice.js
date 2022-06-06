@@ -17,6 +17,12 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload
+      state.apiStatus = {
+        isLoading: false,
+        response: null,
+        isSuccess: false,
+        errors: null,
+      }
     },
   },
   extraReducers: (builder) => {

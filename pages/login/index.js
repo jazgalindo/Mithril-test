@@ -29,10 +29,7 @@ const LoginPage = () => {
             {apiStatus && apiStatus.response && !apiStatus.isLoading && (
               <Alert type='success'>
                 <Typography>
-                  <strong>Successful login !</strong>
-                </Typography>
-                <Typography>
-                  {` Email token: ${apiStatus.response.token}`}
+                  {` Successful login !: ${apiStatus.response.token}`}
                 </Typography>
               </Alert>
             )}
