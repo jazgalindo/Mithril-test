@@ -1,12 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Button, Card, Divider } from '@mui/material'
-import Link from 'next/link'
 import FormElement from '../../../components/FormElement'
 import InputForm from '../../../components/InputForm'
 import styles from './styles.module.css'
 import Form from '../../../components/Form'
 import { setUser } from '../slice'
-import { Colors } from '../../../styles/colors'
 import { siteTitle } from '../../../utils/constans'
 
 const LoginForm = () => {
@@ -42,11 +40,9 @@ const LoginForm = () => {
           />
         </FormElement>
         <FormElement md={12}>
-          <Link href='/process'>
-            <a className={styles.linkForgetAccount}>
-              Did you forget your account?
-            </a>
-          </Link>
+          <a href='/process' className={styles.linkForgetAccount}>
+            Did you forget your account?
+          </a>
         </FormElement>
         <FormElement md={12}>
           <Button className={styles.buttonLogin} variant='contained'>
