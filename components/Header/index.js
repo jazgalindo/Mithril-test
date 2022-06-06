@@ -17,9 +17,9 @@ const Header = () => {
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
             {siteTitle}
           </Typography>
-          <Link href='/login'>
-            <Button color="inherit">Login</Button>
-          </Link>
+          <Button href='/login' color='inherit'>
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

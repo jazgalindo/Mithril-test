@@ -40,6 +40,7 @@ const InputForm = ({
   return (
     <TextField
       size='small'
+      variant="standard" 
       className={styles.input}
       name={name}
       label={label}
