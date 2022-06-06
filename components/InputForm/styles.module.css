@@ -1,11 +1,4 @@
 .input {
   width: 100%;
-}
-
-.MuiFormHelperText-root{
-  font-size: smaller;
-  padding: 0px;
-  margin: 0px;
-  text-align: start;
-  color: red;
+  font-size: small;
 }

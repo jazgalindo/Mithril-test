@@ -30,5 +30,14 @@ img {
   padding: 0px;
   margin: 0px;
   text-align: start;
-  color: red;
+  color: #786e78;
+}
+
+.MuiInputLabel-root{
+  text-align: start;
+}
+
+.MuiInput-root {
+  margin-top: 10px;
+  font-size: .8rem;
 }

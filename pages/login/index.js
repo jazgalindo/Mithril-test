@@ -26,9 +26,9 @@ const LoginPage = () => {
         <Head>
           <title>Login {siteTitle}</title>
         </Head>
-        <section>
+        <div>
           <LoginForm />
-        </section>
+        </div>
       </Layout>
       <style jsx>
         {`
@@ -36,11 +36,12 @@ const LoginPage = () => {
             color: ${Colors.scarlertGum};
             text-align: center;
           }
-          section {
+          div {
             width: 100%;
             display: flex;
             align-items: center;
             text-alingh: center;
+            justify-content: center;
           }
         `}
       </style>

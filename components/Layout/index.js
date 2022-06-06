@@ -30,7 +30,7 @@ const Layout = ({ children, showHeader }) => {
           <meta name='twitter:card' content='summary_large_image' />
         </Head>
         {showHeader && <Header />}
-        <main>{children}</main>
+        {children}
         <footer>
           <i>
             This page will help you create life experiences, where losing
