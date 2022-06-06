@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import Alert from '../../components/Alert'
 import Layout from '../../components/Layout'
 import LoginForm from '../../containers/User/LoginForm'
-import { Colors } from '../../styles/colors'
 import { siteTitle } from '../../utils/constans'
 import styles from './styles.module.css'
 
@@ -27,11 +26,13 @@ const LoginPage = () => {
               </Alert>
             )}
             {apiStatus && apiStatus.response && !apiStatus.isLoading && (
-              <Alert type='success'>
-                <Typography>
-                  <strong>Successful login !</strong>
-                </Typography>
-              </Alert>
+              <div>
+                <Alert type='success'>
+                  <Typography>
+                    <strong>Successful login !</strong>
+                  </Typography>
+                </Alert>
+              </div>
             )}
           </section>
           <div className={styles.loginContainer}>
@@ -40,9 +41,6 @@ const LoginPage = () => {
             </div>
             <div className={styles.loginFormContainer}>
               <LoginForm />
-              <Typography>
-                {`Email token !: ${apiStatus.response.token}`}
-              </Typography>
             </div>
           </div>
         </div>
