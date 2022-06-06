@@ -14,10 +14,6 @@
   width: 100%;
 }
 
-.mainContainer{
-  
-}
-
 .loginContainer{
   display: flex;
   width: 100%;
@@ -31,7 +27,7 @@
   width: 35%;
   height: 100vh;
   display: flex;
-  margin-top: 1rem;
+  padding-top: 2rem;
   justify-content: center;
 }
 
@@ -44,7 +40,7 @@
     width: 50%;
     height: 100vh;
     display: flex;
-    margin-top: 1rem;
+    padding-top: 1.5rem;
     justify-content: center;
   }
 }
@@ -58,7 +54,7 @@
     width: 70%;
     height: 100vh;
     display: flex;
-    margin-top: 1rem;
+    padding-top: 1rem;
     justify-content: center;
   }
 }

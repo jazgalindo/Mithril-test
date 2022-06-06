@@ -36,7 +36,7 @@ const LoginForm = () => {
 
   return (
     <Card className={styles.cardLogin}>
-      <h3 className={styles.titleLogin}>{siteTitle}</h3>
+      <h2 className={styles.titleLogin}>{siteTitle}</h2>
 
       <Form>
         <FormElement md={12}>

@@ -1,4 +1,4 @@
-import { AlertTitle, Grid, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Head from 'next/head'
 import { useSelector } from 'react-redux'
 import Alert from '../../components/Alert'
@@ -49,10 +49,6 @@ const LoginPage = () => {
       </Layout>
       <style jsx>
         {`
-          h1 {
-            color: ${Colors.scarlertGum};
-            text-align: center;
-          }
           p {
             font-size: 0.8rem;
             margin: 1px;
