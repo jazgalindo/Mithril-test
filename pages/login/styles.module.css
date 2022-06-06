@@ -7,12 +7,72 @@
   min-width: max-content;
 }
 
-.data {
+.imageCover {
   display: block;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
 }
 
-@media (max-width: 100px) {
-  .data {
+.mainContainer{
+  
+}
+
+.loginContainer{
+  display: flex;
+  width: 100%;
+}
+
+.imageContainer{
+  width: 65%;
+}
+
+.loginFormContainer{
+  width: 35%;
+  height: 100vh;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .imageContainer{
+    width: 50%;
+  }
+  
+  .loginFormContainer{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .imageContainer{
+    width: 30%;
+  }
+  
+  .loginFormContainer{
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .imageContainer {
     display: none;
+  }
+  .loginFormContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }

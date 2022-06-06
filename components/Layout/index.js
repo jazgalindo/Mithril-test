@@ -31,29 +31,13 @@ const Layout = ({ children, showHeader }) => {
         </Head>
         {showHeader && <Header />}
         {children}
-        <footer>
-          <i>
-            This page will help you create life experiences, where losing
-            yourself is finding yourself
-          </i>
-        </footer>
+       
       </div>
       <style jsx>
         {`
           div {
             min-height: 100vh;
             background: ${Colors.tutu};
-            padding-bottom: 5rem;
-          }
-          footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: white;
-            color: ${Colors.wisteria};
-            text-align: center;
-            font-size: smaller;
           }
         `}
       </style>

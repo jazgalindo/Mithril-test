@@ -1,10 +1,9 @@
-import { Box, Grid } from '@mui/material'
 import { Colors } from '../../styles/colors'
-import styles from './styles.module.css'
 
 /**
- * Form component
+ * Alert
  * @param {Any} children
+ * @param {'error' | 'success'} type
  */
 const Alert = ({ children, type = 'error' }) => {
   return (
@@ -16,8 +15,8 @@ const Alert = ({ children, type = 'error' }) => {
             background: ${type === 'error' ? Colors.wePeep : Colors.tara};
             color: ${type === 'error' ? Colors.tamarillo : Colors.everglade};
             font-size: 0.8rem;
-            width: 100%;
-            padding: 0.1rem;
+            width: 300px;
+            padding: 0.5rem;
             border-radius: 3px;
             margin: 0.2rem;
           }

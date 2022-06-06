@@ -1,4 +1,4 @@
-import { AlertTitle } from '@mui/material'
+import { AlertTitle, Grid, Typography } from '@mui/material'
 import Head from 'next/head'
 import { useSelector } from 'react-redux'
 import Alert from '../../components/Alert'
@@ -6,6 +6,7 @@ import Layout from '../../components/Layout'
 import LoginForm from '../../containers/User/LoginForm'
 import { Colors } from '../../styles/colors'
 import { siteTitle } from '../../utils/constans'
+import styles from './styles.module.css'
 
 const LoginPage = () => {
   const { apiStatus } = useSelector((state) => state.user)
@@ -16,23 +17,34 @@ const LoginPage = () => {
         <Head>
           <title>Login {siteTitle}</title>
         </Head>
-        <div>
+        <div className={styles.mainConatiner}>
           <section className='topConatiner'>
             {apiStatus && apiStatus.errors && !apiStatus.isLoading && (
               <Alert type='error'>
-                <p>Error when logging in, check that the data is correct!</p>
+                <Typography>
+                  Error when logging in, check that the data is correct!
+                </Typography>
               </Alert>
             )}
             {apiStatus && apiStatus.response && !apiStatus.isLoading && (
               <Alert type='success'>
-                <p>
+                <Typography>
                   <strong>Successful login !</strong>
+                </Typography>
+                <Typography>
                   {` Email token: ${apiStatus.response.token}`}
-                </p>
+                </Typography>
               </Alert>
             )}
           </section>
-          <LoginForm />
+          <div className={styles.loginContainer}>
+            <div className={styles.imageContainer}>
+              <img className={styles.imageCover} src='/image.jpeg' />
+            </div>
+            <div className={styles.loginFormContainer}>
+              <LoginForm />
+            </div>
+          </div>
         </div>
       </Layout>
       <style jsx>
@@ -41,15 +53,8 @@ const LoginPage = () => {
             color: ${Colors.scarlertGum};
             text-align: center;
           }
-          div {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            text-alingh: center;
-            justify-content: center;
-          }
           p {
-            font-size: 12px;
+            font-size: 0.8rem;
             margin: 1px;
           }
         `}
