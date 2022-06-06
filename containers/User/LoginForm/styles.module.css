@@ -1,0 +1,23 @@
+.cardLogin{
+ text-align: center;
+ width: 320px;
+}
+
+.buttonLogin {
+  min-width: 100%;
+}
+
+.buttonCreateAccount{
+  min-width: 100%;
+  color:white;
+}
+
+.titleLogin{
+  color:#5D1372;
+  text-align: center;
+}
+
+.linkForgetAccount{
+  font-size: smaller;
+  color: gray
+}
