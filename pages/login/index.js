@@ -1,6 +1,7 @@
-import { Alert, AlertTitle } from '@mui/material'
+import { AlertTitle } from '@mui/material'
 import Head from 'next/head'
 import { useSelector } from 'react-redux'
+import Alert from '../../components/Alert'
 import Layout from '../../components/Layout'
 import LoginForm from '../../containers/User/LoginForm'
 import { Colors } from '../../styles/colors'
@@ -18,14 +19,16 @@ const LoginPage = () => {
         <div>
           <section className='topConatiner'>
             {apiStatus && apiStatus.errors && !apiStatus.isLoading && (
-              <Alert severity='error'>
-                Error when logging in, check that the data is correct!
+              <Alert type='error'>
+                <p>Error when logging in, check that the data is correct!</p>
               </Alert>
             )}
             {apiStatus && apiStatus.response && !apiStatus.isLoading && (
-              <Alert severity='success'>
-                <AlertTitle>Successful login !</AlertTitle>
-                <small>{`Email token: ${apiStatus.response.token}`}</small>
+              <Alert type='success'>
+                <p>
+                  <strong>Successful login !</strong>
+                  {` Email token: ${apiStatus.response.token}`}
+                </p>
               </Alert>
             )}
           </section>
@@ -44,6 +47,10 @@ const LoginPage = () => {
             align-items: center;
             text-alingh: center;
             justify-content: center;
+          }
+          p {
+            font-size: 12px;
+            margin: 1px;
           }
         `}
       </style>

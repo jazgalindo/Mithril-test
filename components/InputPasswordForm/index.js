@@ -33,7 +33,9 @@ const InputPasswordForm = ({
           validations.map((validation) => {
             const validationProp = { helperText: validation.helperText }
             validationProp.error = !regex[validation.regex].test(value)
-            propsValidations.push(validationProp)
+            if (validationProp.error) {
+              propsValidations.push(validationProp)
+            }
           })
           setPropsValidation(propsValidations)
         }
@@ -72,8 +74,9 @@ const InputPasswordForm = ({
 
       {propsValidation.length && (
         <>
-          {propsValidation.map((validation) => (
+          {propsValidation.map((validation, index) => (
             <p
+              key={`${validation.helperText}-${index}`}
               className={`MuiFormHelperText-root 
           ${
             validation.error ? 'Mui-error' : ''

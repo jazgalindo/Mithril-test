@@ -25,6 +25,10 @@ img {
   display: block;
 }
 
+.MuiInputLabel-root {
+  font-size: .8rem;
+}
+
 .MuiFormHelperText-root{
   font-size: .7rem;
   padding: 0px;
