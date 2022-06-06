@@ -1,11 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { TYPE_STATUS_API } from '../../utils/constans'
 import { loginAsync } from './actions'
-import { newUser } from './utils'
 
 const initialState = {
-  user: newUser({}),
-  status: '',
+  user: { password: '', email: '' },
+  apiStatus: {
+    isLoading: false,
+    response: null,
+    isSuccess: false,
+    errors: null,
+  },
 }
 
 export const userSlice = createSlice({
@@ -19,13 +22,28 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(loginAsync.pending, (state) => {
-        state.status = TYPE_STATUS_API.LOADING
+        state.apiStatus = {
+          isLoading: true,
+          response: null,
+          isSuccess: false,
+          errors: null,
+        }
       })
-      .addCase(loginAsync.fulfilled, (state) => {
-        state.status = TYPE_STATUS_API.SUCCESS
+      .addCase(loginAsync.fulfilled, (state, action) => {
+        state.apiStatus = {
+          isLoading: false,
+          response: action.payload.data,
+          isSuccess: true,
+          errors: null,
+        }
       })
-      .addCase(loginAsync.rejected, (state) => {
-        state.status = TYPE_STATUS_API.FAIL
+      .addCase(loginAsync.rejected, (state, action) => {
+        state.apiStatus = {
+          isLoading: false,
+          response: null,
+          isSuccess: false,
+          errors: action,
+        }
       })
   },
 })

@@ -1,5 +1,5 @@
 .cardLogin{
-  margin-top: 2rem;
+ margin-top: 2rem;
  text-align: center;
  max-width: 320px;
 }
@@ -19,6 +19,6 @@
 }
 
 .linkForgetAccount{
-  font-size: smaller;
+  font-size: .8rem;
   color: gray
 }

@@ -1,6 +1,4 @@
 export const siteTitle = 'Life experiences'
-export const TYPE_STATUS_API = {
-  SUCCESS: 'succes',
-  LOADING: 'loading',
-  FAIL: 'fail',
-}
+
+export const minPasswordLength = 8
+export const maxPasswordLength = 8

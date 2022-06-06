@@ -4,7 +4,6 @@ import styles from './styles.module.css'
 /**
  * Form component
  * @param {Any} children
- * @returns {Object}
  */
 const Form = ({ children }) => {
   return (

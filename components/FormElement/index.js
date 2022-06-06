@@ -6,7 +6,6 @@ import styles from './styles.module.css'
  * @param {Any} children
  * @param {Number} xs
  * @param {Number} md
- * @returns {Object}
  */
 const FormElement = ({ children, xs = 12, md = 6 }) => {
   return (

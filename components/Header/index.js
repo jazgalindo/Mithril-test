@@ -2,13 +2,14 @@ import {
   AppBar,
   Box,
   Button,
-  IconButton,
   Toolbar,
   Typography,
 } from '@mui/material'
-import Link from 'next/link'
 import { siteTitle } from '../../utils/constans'
 
+/**
+ * Header app
+ */
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>

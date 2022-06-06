@@ -3,6 +3,16 @@ import { useEffect, useState } from 'react'
 import { regex } from '../../utils/data'
 import styles from './styles.module.css'
 
+/**
+ * InputForm
+ * @param {String} name 
+ * @param {Boolean} validation 
+ * @param {String} label 
+ * @param {String} placeholder 
+ * @param {Function} onChange 
+ * @param {Any} value 
+ * @param {String} type 
+ */
 const InputForm = ({
   name,
   validation = false,
@@ -15,8 +25,6 @@ const InputForm = ({
   const [propsValidation, setPropsValidation] = useState({})
   const helperTexts = {
     email: 'Check the email format',
-    password:
-      'The password must be 8 characters length that must contain at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character within `!@#$%^&*_-~.,;:+=`',
   }
   useEffect(() => {
     if (validation && name) {
@@ -40,7 +48,7 @@ const InputForm = ({
   return (
     <TextField
       size='small'
-      variant="standard" 
+      variant='standard'
       className={styles.input}
       name={name}
       label={label}

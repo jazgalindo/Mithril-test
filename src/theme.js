@@ -9,7 +9,7 @@ const theme = createTheme({
       main: Colors.bouquet,
     },
     secondary: {
-      main: '#efb810',
+      main: '#7eaf80',
     },
     error: {
       main: red.A200,

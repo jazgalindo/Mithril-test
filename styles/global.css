@@ -26,7 +26,7 @@ img {
 }
 
 .MuiFormHelperText-root{
-  font-size: smaller;
+  font-size: .7rem;
   padding: 0px;
   margin: 0px;
   text-align: start;
@@ -40,4 +40,10 @@ img {
 .MuiInput-root {
   margin-top: 10px;
   font-size: .8rem;
+}
+
+.topConatiner{
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
